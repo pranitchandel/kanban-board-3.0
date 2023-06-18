@@ -1,0 +1,294 @@
+.container{
+    display: flex;
+    gap:15px;
+}
+
+.todo{
+    width: 33%;
+    padding: 20px;
+    background: #F5F5F5;
+    border-radius: 16px 16px 0px 0px;
+   height: fit-content;
+}
+
+.topHeading{
+    height: 20px;
+    margin-bottom: 19px;
+    display: flex;
+    align-items: center;
+}
+
+.topHeading span{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px 12px 0px 8px;
+}
+
+.taskCount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #E0E0E0;
+    color:  #625F6D;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.addProject{
+    margin-left: auto;
+}
+.emptyDiv{
+    width:100%;
+    height:3px;
+}
+
+.emptyTodos{
+    background-color:  #5030E5;
+}
+
+.emptyProgress{
+    background-color: #FFA500;
+}
+
+.emptyCompleted{
+    background-color: #8BC48A;
+}
+
+
+.taskPriority{
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+}
+
+.low{
+    background: rgba(223, 168, 116, 0.2);
+    color: #D58D49;
+}
+
+.completed{
+    background: rgba(131, 194, 157, 0.2);
+    color: #68B266;
+}
+
+.high{
+    background: #D8727D1A;
+    color: #D8727D;
+
+}
+
+.taskListWrapper{
+    margin-top: 28px;
+}
+
+
+.tasksWrapper{
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: move;
+} 
+
+.taskTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+
+.moreInfo{
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.taskName{
+    font-size: 18px;
+    font-weight: 600;
+    color: #0D062D;
+}
+
+.content{
+    /* height: 100px; */
+    width: 100%;
+    margin: 6px 0px 28px 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #787486;
+    overflow: hidden;
+    max-height: 200px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 15;
+    -webkit-box-orient: vertical;
+}
+
+.taskBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.workingPpt{
+        width: 30%;
+        height: 20px;
+        position: relative;
+}
+
+.ppt1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+.ppt2{
+    position: absolute;
+    left: 19px;
+    top: 0;
+    z-index: 3;
+}
+
+.ppt3{
+    position: absolute;
+    left: 38px;
+    top: 0;
+    z-index: 2;
+}
+
+.remainingPpts{
+    border-radius: 50%;
+    color: #D25B68;
+    background: #F4D7DA;
+    border: 1px solid #FFFFFF;
+width: 24px;
+height: 24px;
+position: absolute;
+top: 0;
+    left:57px;
+    z-index:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.statsWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 170px;
+    /* display: inline-block; */
+}
+
+.statsIcon{
+    margin-right:5px;
+}
+
+.comments{
+    display: flex;
+    align-items: center;
+}
+
+.comments span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #787486;
+}
+
+.draggableWrapper{
+    background: rgba(80, 48, 229, 0.06);
+    border: 1px dashed rgba(80, 48, 229, 0.59);
+    border-radius: 10px;
+    height: 200px;
+}
+
+
+.drag {
+    rotate:3deg;
+  }
+
+
+  .dragActive {
+    background-color: rgb(0, 221, 236);
+  }
+  
+  .dragcomplete {
+    background-color: rgb(255, 38, 0);
+  }
+  
+  .remove {
+    background-color: rgb(235, 103, 80);
+  }
+
+
+@media screen and (max-width:600px) {
+
+    .container{
+        /* scroll-snap-type: x proximity; */
+        gap: 10px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .todo{
+        /* padding: 10px; */
+        min-width: 90%;
+        /* scroll-snap-align:start; */
+    }
+
+    .tasksWrapper{
+        padding: 10px;
+    }
+
+    .taskBottom{
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .workingPpt{
+        width: 100%;
+    }
+    .statsWrapper{
+        width: 100%;
+        margin-right: auto;
+    }
+    .content{
+        margin-bottom: 15px;
+        overflow: hidden;
+        max-height: 60px;
+        -webkit-line-clamp: 4;
+    }
+}
+
+@media screen and (max-width:850px) and (min-width:600px) {
+    .todo{
+        padding: 10px;
+    }
+
+    .tasksWrapper{
+        padding: 10px;
+    }
+
+    .taskBottom{
+       flex-direction: column;
+       gap: 8px;
+       align-items: flex-start;
+    }
+
+    .statsWrapper{
+        width: 100%;
+        gap: 5px;
+    }
+
+    .content{
+        margin-bottom: 15px;
+        max-height: 100px;
+        -webkit-line-clamp: 6;
+    }
+}

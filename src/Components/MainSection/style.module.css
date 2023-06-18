@@ -1,0 +1,219 @@
+.container{
+    height: 89.41vh;
+    overflow: auto;
+    padding: 41px 48px 0px 48.5px;
+}
+
+.topSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.sectionNameWrapper{
+    display: flex;
+    align-items: center;
+}
+.sectionName{
+    font-size: 46px;
+    font-weight: 600;
+    margin-right: 4.5px;
+}
+
+.sectionNameImage{
+    margin-left: 17px;
+}
+
+.topRightSection{
+    display: flex;
+    align-items: center;
+}
+
+.inviteText{
+    margin: 0px 12px 0px 8.5px;
+    color: #5030E5;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ppts{
+    width: 158px;
+    height: 38px;
+    position: relative;
+}
+
+/* .pptList{
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50%;
+} */
+
+.ppt1{
+    position: absolute;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ppt2{
+    position: absolute;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    top: 0;
+    left:30px;
+    z-index:2;
+}
+
+.ppt3{
+    position: absolute;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    top: 0;
+    left:60px;
+    z-index:2;
+}
+
+.ppt4{
+    position: absolute;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    top: 0;
+    left:90px;
+    z-index:2;
+}
+
+.remainingPpts{
+    border-radius: 50%;
+    color: #D25B68;
+    background: #F4D7DA;
+    border: 1px solid #FFFFFF;
+width: 38px;
+height: 38px;
+position: absolute;
+top: 0;
+    left:120px;
+    z-index:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.middleSection{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+}
+
+.dropdownWrapper{
+    display: flex;
+    width: 21.5%;
+    height: 40px;
+    gap: 4.6%;
+}
+
+.dropdown{
+    /* padding: 12px 15px; */
+    width: 122px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #787486;
+    border-radius: 6px;
+}
+
+.dropdown span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #787486;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.middleRight{
+    width: 220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 97px;
+    border: 1px solid #787486;
+    border-radius: 6px;
+}
+
+.share span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #787486;
+    margin-left: 6px;
+}
+
+.emptyDiv{
+    width: 1px;
+    height: 28px;
+    margin: 0px 20px;
+    background-color: #787486;
+}
+
+.shareOther{
+    margin-right: 22px;
+}
+
+@media screen and (max-width:600px){
+    .container{
+        padding: 10px;
+    }
+
+    .topSection{
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    .topRightSection{
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .middleSection{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .dropdownWrapper{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .middleRight{
+        width: 100%;
+        justify-content: center;
+        gap:1.6%;
+    }
+
+    .share{
+        width: 122px;
+    }
+}
+
+
+@media screen and (max-width:850px) and (min-width:600px) {
+    .container{
+        padding: 20px;
+    }
+
+    .dropdown{
+        padding: 10px;
+    }
+
+}

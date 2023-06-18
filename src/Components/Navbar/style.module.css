@@ -1,0 +1,322 @@
+.container{
+    width: 17.4vw;
+    border-right:1px solid #DBDBDB;
+    /* animation: navWidth 2s linear forwards; */
+    transition: width 1s;
+}
+
+.navClose{
+    transition: width 1s;
+    border-right:1px solid #DBDBDB;
+    /* animation: navWidth 2s linear reverse forwards; */
+    width: 5vw;
+}
+
+/* @keyframes navWidth {
+    from{width:5vw;}
+    to{width:17.4vw;}
+} */
+
+.navHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10.59vh;
+    border-bottom:1px solid #DBDBDB;
+    position: relative;
+}
+
+.navHeadingShow{
+    display: flex;
+    /* animation: opacityChange 1s cubic-bezier(.02,.17,.99,.02) backwards; */
+}
+
+.navHeadingHide{
+    display: none;
+}
+
+@keyframes widthChange {
+    from {visibility: 0; }
+    to {visibility: 1; }    
+}
+
+.projectName{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 9px;
+    margin-right: 46px;
+    color: #0D062D;
+    overflow: hidden;
+    width: 7vw;
+    white-space: nowrap;
+}
+
+.closeIcon{
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.openIcon{
+    transform: rotate(180deg);
+}
+
+.navSections{
+    padding-bottom: 30.5px;
+}
+
+.section{
+    height: 24px;
+    margin: 27px 0px 0px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sectionText{
+    font-size: 16px;
+    font-weight: 600;
+    color: #787486;
+    /* animation: widthChange 5s cubic-bezier(.02,.17,.99,.02) backwards; */
+}
+
+
+.emptyDiv{
+    width: 15.5vw;
+    height: 1px;
+    background-color: #DBDBDB;
+    margin: auto;
+    transition: width 2s;
+}
+
+.closeEmptyDiv{
+    transition: width 0.5s;
+    width: 90%;
+}
+
+.projectsWrapper{
+    padding: 0px 14px 0px 12px;
+    margin-top: 30.5px;
+    overflow-x: hidden;
+}
+
+.projectsListWrapper{}
+
+.projectHeading{
+    margin: 21px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 0px 14px 0px 12px;
+    height: 16px;
+    justify-content: space-between;
+}
+
+.headingText{
+    font-size: 12px;
+    font-weight: 700;
+    color:#787486;
+}
+
+.projectNameWrapper{
+    margin: 0px 0px 21px 0px;
+    border-radius: 6px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    padding: 0px 14px 0px 12px;
+    cursor: pointer;
+}
+
+.projectNameActive{
+    background: rgba(80, 48, 229, 0.08);
+}
+
+.projectNameInactive{
+    background-color: #ffffff;
+}
+
+.projectSectionName{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+.tripleDots{
+    width: fit-content;
+    /* margin-right: auto; */
+}
+
+.thought{
+    background: #F5F5F5;
+    border-radius: 16px;
+    height: 200px;
+    margin: 88px 14px 30px 12px;
+    position: relative;
+    padding: 20px;
+}
+
+.bulbWrapper{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -17%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #F5F5F5;
+}
+
+.blur{
+    width: 33px;
+    height: 33px;
+    background-color: rgba(252, 214, 74, 0.7);
+    filter: blur(17px);
+}
+
+.bulb{
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.contentWrapper{
+    margin: auto;
+    margin-top: 17px;
+    text-align: center;
+}
+
+.contentHeading{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.contentText{
+    font-size: 12px;
+    font-weight: 400px;
+    color: #787486;
+    margin: 12px 0px 14px 0px;
+}
+
+.message{
+    background: #FFFFFF;
+border-radius: 4px;
+height: 40px;
+font-size: 14px;
+font-weight: 500;
+color: #000;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.navProjectsListWrapper{    
+    margin-top: 21px;
+    height: 219px;
+    overflow: auto;
+}
+
+.navProjectsListWrapper :last-child{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        position: absolute;
+        z-index: 100;
+        background-color: #fff;
+        width: 50vw;
+    }
+    .navClose{
+        display: none;
+    }
+
+    .closeIcon{
+        cursor: pointer;
+        transition: transform 1s;
+    }
+
+    .openIcon{
+        transform: rotate(180deg);
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .navHeading{
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .navHeadingShow{
+        flex: 1;
+    }
+
+    .projectName{
+        min-width: 70%;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 600px) {
+    .navHeading{
+        height: 8vh;
+    }
+
+    .projectName{
+        margin: 0 20px 0px 5px;
+    }
+
+    .container{
+        width:22vw;
+    }
+
+    .navClose{
+        width: 9vw;
+    }
+
+    .projectNavName{
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .projectNameWrapper{
+        margin: 0px 0px 15px 0px;
+        padding: 5px;
+        height: 50px;
+    }
+
+    .projectNameActive{
+        height: 50px;
+        padding: 5px;
+    }
+    .thought{
+        height: 180px;
+        padding: 10px;
+    }
+
+    .contentWrapper{
+        margin-top: 22px;
+    }
+    .message{
+        height: 35px;
+    }
+
+    .contentText{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}

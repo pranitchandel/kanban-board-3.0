@@ -1,0 +1,146 @@
+.container{
+    display: flex;
+    align-items: center;
+    height: 10.59vh;
+    position: relative;
+    border-bottom: 1px solid #DBDBDB;
+    
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    width: 28.9vw;
+    /* width: 417px; */
+    height: 44px;
+    margin-left: 4%;
+    border-radius: 6px;
+    background-color: #F5F5F5;
+    /* letter-spacing: 20px; */
+}
+
+.searchBar ::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.searchIcon{
+    margin-left: 16.8px;
+}
+
+.searchBar input{
+    font-size: 14px;
+    font-weight: 400;
+    color: #787486;
+    padding-left: 18.75px;
+    letter-spacing: 0.5px;
+    background-color: #F5F5F5;
+    border-radius: 6px;
+}
+
+.profileWrapper{
+    width: 25.76vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.4vw;
+    position: absolute;
+    right: 3.3%;
+}
+
+.topIcons{
+    width: 120px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topIcons img{
+}
+
+.profile{
+    height: 39px;
+    display: flex;
+    align-items: center;
+}
+
+.profileName{
+    font-size: 16px;
+    font-weight: 400;
+    color: #0D062D;
+}
+
+.profileAddress{
+    font-size: 14px;
+    font-weight: 400;
+    color: #787486;
+    text-align: end;
+}
+
+.profileImage{
+    border-radius: 50%;
+    margin-left: 18px;
+    margin-right: 7.5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container{
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: space-evenly;
+       width: 100%;
+       padding: 10px;
+       height: 120px;
+    }
+
+    .searchBar{
+        width: 100%;
+    }
+
+    .profileWrapper{
+        position: static;
+        width: 100%;
+        height: 40px;
+        justify-content: space-between;
+    }
+
+    .searchBar{
+        margin-left: 0;
+    }
+
+    .topIcons{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 600px) {
+    .container{
+        height: 8vh;
+       width: 100%;
+       padding: 10px;
+       justify-content: space-between;
+       flex-direction: row-reverse;
+    }
+
+    .profileWrapper{
+        justify-content: flex-end;
+        position: static;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .topIcons{
+        width: 100px;
+    }
+
+    .searchBar{
+        margin-left: 0;
+    }
+
+    .profile{
+        width: 70%;
+        max-width: 200px;
+    }
+}
