@@ -15,9 +15,9 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, []);
 
   useEffect(() => {
-    console.log("isopen ", isOpen);
     searchParams.set("project", projectsData[0].id);
     navigate({ pathname: ``, search: searchParams.toString() });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleProjectClick = (project) => {

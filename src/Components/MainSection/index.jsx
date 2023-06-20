@@ -13,6 +13,7 @@ const MainSection = () => {
   useEffect(() => {
     const projectName = search.get("project") || projectsData[0].id;
     setProjectData(projectsData.find((project) => project.id === projectName));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (

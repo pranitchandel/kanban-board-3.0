@@ -19,6 +19,7 @@ const TaskSection = ({ projectData }) => {
     setTodos(getSectionData("todos"));
     setCompleted(getSectionData("completed"));
     setInProgress(getSectionData("inProgress"));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectData]);
 
   const onDragEnd = (result) => {
